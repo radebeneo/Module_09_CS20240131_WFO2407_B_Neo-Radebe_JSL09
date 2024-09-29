@@ -54,3 +54,7 @@ navigator.geolocation.getCurrentPosition(async position => {
     try {
         const res = await fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
         
+        // Check if the response is successful
+        if (!res.ok) {
+            throw Error("Weather data not available")
+        }
