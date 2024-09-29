@@ -58,3 +58,8 @@ navigator.geolocation.getCurrentPosition(async position => {
         if (!res.ok) {
             throw Error("Weather data not available")
         }
+
+        const data = await res.json()
+
+        // Get the weather icon URL based on the weather condition code
+        const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
