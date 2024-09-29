@@ -20,3 +20,10 @@ try {
     if (!res.ok) {
         throw Error("Something went wrong")
     }
+
+    const data = await res.json()
+
+    // Display Dogecoin image and name
+    document.getElementById("crypto-top").innerHTML = `
+        <img src=${data.image.small} />
+        <span>${data.name}</span>`
