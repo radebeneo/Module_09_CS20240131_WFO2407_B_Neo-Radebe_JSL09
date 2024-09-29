@@ -27,3 +27,9 @@ try {
     document.getElementById("crypto-top").innerHTML = `
         <img src=${data.image.small} />
         <span>${data.name}</span>`
+
+    // Display Dogecoin current price, 24-hour high, and 24-hour low
+    document.getElementById("crypto").innerHTML += `
+        <p>🎯: $${data.market_data.current_price.usd}</p>
+        <p>👆: $${data.market_data.high_24h.usd}</p>
+        <p>👇: $${data.market_data.low_24h.usd}</p>`
