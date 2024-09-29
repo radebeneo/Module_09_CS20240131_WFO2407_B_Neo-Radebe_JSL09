@@ -33,8 +33,15 @@ try {
         <p>🎯: $${data.market_data.current_price.usd}</p>
         <p>👆: $${data.market_data.high_24h.usd}</p>
         <p>👇: $${data.market_data.low_24h.usd}</p>`
-        
+
 } catch (err) {
     // Log the error to the console if the API call fails
     console.error(err)
+}
+
+// Function to get and display the current time
+function getCurrentTime() {
+    const date = new Date()
+    // Display time in 'short' format (e.g., 9:00 AM)
+    document.getElementById("time").textContent = date.toLocaleTimeString("en-us", { timeStyle: "short" })
 }
