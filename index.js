@@ -33,3 +33,8 @@ try {
         <p>🎯: $${data.market_data.current_price.usd}</p>
         <p>👆: $${data.market_data.high_24h.usd}</p>
         <p>👇: $${data.market_data.low_24h.usd}</p>`
+        
+} catch (err) {
+    // Log the error to the console if the API call fails
+    console.error(err)
+}
