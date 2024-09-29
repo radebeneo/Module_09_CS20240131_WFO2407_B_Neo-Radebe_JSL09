@@ -63,3 +63,9 @@ navigator.geolocation.getCurrentPosition(async position => {
 
         // Get the weather icon URL based on the weather condition code
         const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+
+        // Display the weather icon, temperature, and city name
+        document.getElementById("weather").innerHTML = `
+            <img src=${iconUrl} />
+            <p class="weather-temp">${Math.round(data.main.temp)}º</p>
+            <p class="weather-city">${data.name}</p>`
