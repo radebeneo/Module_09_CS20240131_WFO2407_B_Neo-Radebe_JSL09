@@ -48,3 +48,9 @@ function getCurrentTime() {
 
 // Update the time every second
 setInterval(getCurrentTime, 1000)
+
+// Get the user's location and fetch weather data from OpenWeatherMap API
+navigator.geolocation.getCurrentPosition(async position => {
+    try {
+        const res = await fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
+        
