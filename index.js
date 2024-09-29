@@ -45,3 +45,6 @@ function getCurrentTime() {
     // Display time in 'short' format (e.g., 9:00 AM)
     document.getElementById("time").textContent = date.toLocaleTimeString("en-us", { timeStyle: "short" })
 }
+
+// Update the time every second
+setInterval(getCurrentTime, 1000)
