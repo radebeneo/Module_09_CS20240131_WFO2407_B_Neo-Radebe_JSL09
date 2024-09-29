@@ -12,3 +12,7 @@ try {
     document.getElementById("author").textContent = `By: Neo Radebe`
 }
 
+// Fetch Dogecoin data from CoinGecko API and display its image, name, and price data
+try {
+    const res = await fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+
