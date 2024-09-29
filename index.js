@@ -69,3 +69,8 @@ navigator.geolocation.getCurrentPosition(async position => {
             <img src=${iconUrl} />
             <p class="weather-temp">${Math.round(data.main.temp)}º</p>
             <p class="weather-city">${data.name}</p>`
+    } catch (err) {
+        // Log the error to the console if the API call fails
+        console.error(err)
+    }
+});
